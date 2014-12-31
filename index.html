@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodo Ajax Load</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+
+	jQuery(document).ready(function($) {
+		init();
+	});
+
+	function init(){
+		$('a').click(flecha);
+	}
+
+	function flecha(){
+		var pagina=$(this).attr('href');
+		$('#hablame').load(pagina);
+		return false;
+	}
+
+	</script>
+</head>
+<body>
+	<a href="colores.php?color=verde">Hablame del verde</a>
+	<a href="colores.php?color=azul">Hablame del azul</a>
+	<a href="colores.php?color=rojo">Hablame del rojo</a>
+	<div id="hablame"></div>
+</body>
+</html>
